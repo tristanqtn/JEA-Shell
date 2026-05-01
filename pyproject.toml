@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "jea-shell"
+version = "0.1.0"
+description = "Kerberos WinRM shell with JEA and ConstrainedLanguageMode support"
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pypsrp = "^0.8.1"
+gssapi = "^1.8"
+requests = "^2.32"
+
+[tool.poetry.scripts]
+jea-shell = "jea_shell:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

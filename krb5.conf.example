@@ -1,0 +1,18 @@
+[libdefaults]
+    default_realm = CORP.LOCAL
+    dns_lookup_realm = false
+    dns_lookup_kdc = true
+    forwardable = true
+    ticket_lifetime = 24h
+    renew_lifetime = 7d
+
+[realms]
+    CORP.LOCAL = {
+        kdc = dc1.corp.local
+        admin_server = dc1.corp.local
+        default_domain = corp.local
+    }
+
+[domain_realm]
+    .corp.local = CORP.LOCAL
+    corp.local = CORP.LOCAL
